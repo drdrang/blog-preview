@@ -11,4 +11,4 @@ The two lines of code are
 
 The first line runs the `post-preview.py` script, creating or overwriting the `post-preview.html` file. The second line opens `post-preview.html` in my default browser. In addition to writing a file on the Desktop, `post-preview.py` writes "Done" to standard output, which Good Preview shows as a tooltip when the command finishes successfully. The Good Preview TextMate command is not included in the repository, which is why I've reproduced it here.
 
-I deleted the original Preview command from the Blogging bundle and removed the ⌃⌥⌘P Key Equivalent from the Preview commands in the Markdown bundle. It might have been smarter to use a different key combination for Good Preview and preserve ⌃⌥⌘P for the standard behavior.
+I deleted the original Preview command from the Blogging bundle and removed the ⌃⌥⌘P Key Equivalent from the Preview commands in the Markdown bundle. It might have been smarter to use a different key combination for Good Preview and preserve ⌃⌥⌘P for the standard behavior. Oh well.
