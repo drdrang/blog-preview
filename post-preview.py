@@ -5,7 +5,7 @@ from subprocess import *
 from os.path import expanduser
 
 # Customize these paths as needed.
-page = expanduser('~/Desktop/post-preview.html')
+page = expanduser('~/blog-preview/post-preview.html')
 markdown = expanduser('~/bin/mmmd')
 smartypants = expanduser('~/bin/SmartyPants')
 style = expanduser('~/blog-preview/style.css')
