@@ -9,6 +9,7 @@ page = expanduser('~/blog-preview/post-preview.html')
 markdown = expanduser('~/bin/mmmd')
 smartypants = expanduser('~/bin/SmartyPants')
 style = expanduser('~/blog-preview/style.css')
+jQuery = expanduser('~/blog-preview/jquery-1.4.2.min.js')
 styleLineNumbers = expanduser('~/blog-preview/styleLineNumbers.js')
 footnotePopup = expanduser('~/blog-preview/footnote-popup.js')
 jsMath = expanduser('~/Library/JavaScript/jsMath/easy/load.js')
@@ -36,7 +37,7 @@ html =  '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
    <title>Preview - %s</title>
 	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
    <link rel="stylesheet" type="text/css" media="all" href="%s" />
-   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+   <script type="text/javascript" src="%s"></script>
    <script type="text/javascript" src="%s"></script>
    <script type="text/javascript" src="%s"></script>
    <script type="text/javascript" src="%s"></script>
@@ -56,7 +57,7 @@ html =  '''<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
       </div> <!-- note -->
     </div> <!-- container -->
   </body>
-</html>''' % (title, style, styleLineNumbers, footnotePopup, jsMath, title, article)
+</html>''' % (title, style, jQuery, styleLineNumbers, footnotePopup, jsMath, title, article)
 
 open(page, 'w').write(html)
 print "Done"
