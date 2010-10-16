@@ -1,6 +1,6 @@
 This is unlikely to be of use to anyone other than me, but…
 
-I wanted a TextMate command that would generate a local preview of my blog posts that matched the look of the published posts. I write my posts in a variant of Markdown and use some JavaScript to further reformat some of the content (equations, numbered lines of code, and footnotes). The `post-preview.py` script converts the Markdown to an HTML fragment, wraps that fragment in boilerplate HTML that references the necessary JavaScript and style files, and saves the result to a file, `post-preview.html`, in the directory with the scripts. The TextMate command I use to preview my posts is this addition to the Blogging Bundle, called Good Preview:
+I wanted a TextMate command that would generate a local preview of my blog posts that matched the look of the published posts. I write my posts in a variant of Markdown and use some JavaScript to further reformat some of the content (equations, numbered lines of code, and footnotes). The `post-preview.php` script converts the Markdown to an HTML fragment, wraps that fragment in boilerplate HTML that references the necessary JavaScript and style files, and saves the result to a file, `post-preview.html`, in the directory with the scripts. The TextMate command I use to preview my posts is this addition to the Blogging Bundle, called Good Preview:
 
 <img src="http://www.leancrew.com/all-this/images2010/good-preview-php-tm.png" />
 
