@@ -1,6 +1,7 @@
 <?php
 $home = getenv("HOME");
 require_once("$home/php-markdown-extra-math/markdown.php");
+require_once("$home/php-smartypants/smartypants.php");
 $full = stream_get_contents(STDIN);
 $parts = preg_split("/\n\n/", $full, 2);
 $header_lines = preg_split("/\n/", $parts[0]);
@@ -30,7 +31,7 @@ $title_parts = preg_split("/: /", $title_lines[0]);
       
       <div id="content">
         <h1><?php echo $title_parts[1] ?></h1>
-        <?php echo Markdown($parts[1]) ?>
+        <?php echo SmartyPants(Markdown($parts[1])) ?>
       </div> <!-- note -->
     </div> <!-- container -->
   </body>
