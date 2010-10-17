@@ -6,7 +6,7 @@ $(document).ready(function() {
 var Footnotes = {
     footnotetimeout: false,
     setup: function() {
-        var footnotelinks = $('a.footnote');
+        var footnotelinks = $("a[rel='footnote']")
         
         footnotelinks.unbind('mouseover',Footnotes.footnoteover);
         footnotelinks.unbind('mouseout',Footnotes.footnoteoout);
@@ -29,6 +29,7 @@ var Footnotes = {
 
         var el = document.getElementById(id);
         div.html($(el).html());
+        div.find("a[rev='footnote']").remove();
         
         div.css({
             position:'absolute',
@@ -45,6 +46,7 @@ var Footnotes = {
             opacity:0.95
         });
         $(document.body).append(div);
+        
 
         var left = position.left;
         if(left + 420  > $(window).width() + $(window).scrollLeft())
