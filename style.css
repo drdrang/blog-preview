@@ -59,13 +59,15 @@ a:hover {
 
 #content {
   margin-top: 0em;
-  margin-right: 12em;  /* sidebar: (14 + 1 + 1)*.75 */
+/*  margin-right: 12em;*/  /* sidebar: (14 + 1 + 1)*.75 */
   padding-top: .5em;
   padding-left: 1.5em;
   padding-right: 1.5em;
   padding-bottom: 1em;
   background: white;
   line-height: 1.4;
+  float: left;
+  width: 35em;
 }
 
 #content h1 {
@@ -252,6 +254,14 @@ a:hover {
   margin-bottom: .5em;
 }
 
+#content div.sidebar {
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: #efe;
+  border: 1px solid #898;
+  margin-bottom: .5em;
+}
+
 #content .spoiler {
   background: #898;
   color: #898;
@@ -321,9 +331,10 @@ a:hover {
 #sidebar {
   font-family: Helvetica, Sans-Serif;
   font-size: 75%;
-  background: #ded;
-  width: 14em;
-  float: right;
+  /*background: #ded;
+    width: 14em;
+    float: right;*/
+  margin-left: 51em;
   margin-top: 0em;
   /*border-left-style: solid;
     border-left-width: .25em;
@@ -345,7 +356,7 @@ a:hover {
   margin-bottom: .5em;
 }
 
-sidebar h3, h4, h5 {
+#sidebar h3, h4, h5 {
   font-size: 100%;
 }
 
@@ -396,3 +407,6 @@ sidebar h3, h4, h5 {
   margin-left: 1.5em;
 }
 
+#footer {
+  clear: both;
+}
