@@ -34,6 +34,7 @@ $title_parts = preg_split("/: /", $title_lines[0]);
       
       <div id="sidebar">
        </div> <!-- sidebar -->
+       
       <div id="footer">
       </div> <!-- footer -->
     </div> <!-- container -->

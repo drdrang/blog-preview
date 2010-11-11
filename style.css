@@ -59,7 +59,6 @@ a:hover {
 
 #content {
   margin-top: 0em;
-/*  margin-right: 12em;*/  /* sidebar: (14 + 1 + 1)*.75 */
   padding-top: .5em;
   padding-left: 1.5em;
   padding-right: 1.5em;
@@ -331,14 +330,8 @@ a:hover {
 #sidebar {
   font-family: Helvetica, Sans-Serif;
   font-size: 75%;
-  /*background: #ded;
-    width: 14em;
-    float: right;*/
   margin-left: 51em;
   margin-top: 0em;
-  /*border-left-style: solid;
-    border-left-width: .25em;
-    border-left-color: #454;*/
   padding-top: .5em;
   padding-left: 1em;
   padding-right: 1em;
