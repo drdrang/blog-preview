@@ -327,6 +327,10 @@ a:hover {
   margin-bottom: 0;
 }
 
+#content div.gist {
+  font-size: 80%;
+}
+
 #sidebar {
   font-family: Helvetica, Sans-Serif;
   font-size: 75%;
