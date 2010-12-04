@@ -327,8 +327,8 @@ a:hover {
   margin-bottom: 0;
 }
 
-#content div.gist {
-  font-size: 80%;
+#content div.line {
+  font-family: Monospace;
 }
 
 #sidebar {
