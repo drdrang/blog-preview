@@ -101,7 +101,7 @@ a:hover {
 #content pre, blockquote {
   padding-left: 1em;
   padding-right: 1em;
-  background-color: #efe;
+  background-color: #F3FEF3;
 }
 
 #content pre {
@@ -256,7 +256,7 @@ a:hover {
 #content div.sidebar {
   padding-left: 1em;
   padding-right: 1em;
-  background-color: #efe;
+  background-color: #F3FEF3;
   border: 1px solid #898;
   margin-bottom: .5em;
 }

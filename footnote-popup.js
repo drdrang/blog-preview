@@ -34,7 +34,7 @@ var Footnotes = {
         div.css({
             position:'absolute',
             width:'400px',
-            background:'#ded',
+            background:'#F3FEF3',
             padding:'0em 1em 0em 1em',
             border:'solid 1px',
             'font-size':'90%',
