@@ -101,7 +101,7 @@ a:hover {
 #content pre, blockquote {
   padding-left: 1em;
   padding-right: 1em;
-  background-color: #ded;
+  background-color: #efe;
 }
 
 #content pre {
@@ -327,7 +327,7 @@ a:hover {
   margin-bottom: 0;
 }
 
-#content div.line {
+#content div.gist pre {
   font-family: Monospace;
 }
 
