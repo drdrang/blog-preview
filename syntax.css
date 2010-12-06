@@ -44,7 +44,7 @@
 #content .highlight .kd { color: #a0a; font-weight: bold } /* Keyword.Declaration */
 #content .highlight .kn { color: #a0a; font-weight: bold } /* Keyword.Namespace */
 #content .highlight .kr { color: #c22; font-weight: bold } /* Keyword.Reserved */
-#content .highlight .s { color: #c22; font-style: italic } /* Literal.String */
+#content .highlight .s { color: #c22; } /* Literal.String */
 #content .highlight .nc { font-weight: bold } /* Name.Class */
 #content .highlight .ni { font-weight: bold } /* Name.Entity */
 #content .highlight .ne { font-weight: bold } /* Name.Exception */
