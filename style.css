@@ -99,6 +99,7 @@ a:hover {
 }*/
 
 #content pre, blockquote {
+  font-size: 90%;
   padding-left: 1em;
   padding-right: 1em;
   background-color: #F3FEF3;
