@@ -19,15 +19,24 @@ function addLineNumbers(lineArray, start) {
   return numberedLineArray;
 }
 
-function styleLN() {
+function styleCode() {
+  // IE wouldn't work with arly versions of this function, so I stopped trying
+  // to get it to work. Now that the function's been rewritten, I may need to
+  // revisit this decision.
   var isIE = navigator.appName.indexOf('Microsoft') != -1;
   if (isIE) return;
+  
+  //Initialize the highlighting code.
+  hljs.initialize();
+  
+  
+  // Go through each of the <pre><code> blocks.
   $('pre code').each( function(i, v) {
     var oldContent = v.innerHTML;
     var newContent = [];
     
     // Get the language, if it's given.
-    var lang = oldContent.match(/^(perl|python|javascript|html|css|ruby|php|bash):\n/);
+    var lang = oldContent.match(/^(bash|cmake|cpp|css|diff|xml|html|ini|java |javascript|lisp|lua|perl|php|python|ruby|scala |sql|tex):\n/);
     if (lang) {
       lang = lang[1];
       oldContent = oldContent.split("\n").slice(1).join("\n");
@@ -47,8 +56,9 @@ function styleLN() {
     }
     
     if (lang) {
-      // Put the syntax highlighting stuff here. Will have to join,
-      // highlight, then split again.
+      var code = newContent.join("\n");
+      code = hljs.highlight(lang, code).value;
+      newContent = code.split("\n");
       if (line) {
         newContent = addLineNumbers(newContent, line);
         newContent.push("");
