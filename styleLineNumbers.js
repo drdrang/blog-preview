@@ -15,13 +15,13 @@ function styleLN() {
     var newContent = oldContent.replace(/^( *)(\d+):(  )/mg, 
                '<span class="ln">$1$2$3<' + '/span>');
     if (oldContent.match(/^( *)(\d+):(  )/mg)) {
-      newContent += "\n" + '<button onclick="showCode(this.parentNode)">Without line numbers</button>';
+      newContent += "\n" + '<button onclick="showPlain(this.parentNode)">Without line numbers</button>';
     }
     code.innerHTML = newContent;
   }
 }
 
-function showCode(code) {
+function showPlain(code) {
   var oldCode = code.cloneNode(true);
   for (var i=0; i<oldCode.childNodes.length; i++){
     node = oldCode.childNodes[i];
