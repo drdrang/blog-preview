@@ -17,8 +17,8 @@ $title_parts = preg_split("/: /", $title_lines[0]);
   <link rel="stylesheet" type="text/css" media="all" href="style.css" />
   <link rel="stylesheet" type="text/css" media="all" href="syntax.css" />
   <script type="text/javascript" src="<?php echo "$home/Library/JavaScript/MathJax/MathJax.js" ?>"></script>
-  <script type="text/javascript" src="styleLineNumbers.js"></script>
   <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="styleLineNumbers.js"></script>
   <script type="text/javascript" src="footnote-popup.js"></script>
 </head>
 <body onload="styleLN()">
@@ -39,7 +39,7 @@ $title_parts = preg_split("/: /", $title_lines[0]);
       <div id="footer">
       </div> <!-- footer -->
     </div> <!-- container -->
-    
+
   </body>
 </html>
 
