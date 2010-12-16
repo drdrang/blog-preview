@@ -7,9 +7,6 @@ Original style from softwaremaniacs.org (c) Ivan Sagalaev <Maniac@SoftwareManiac
 pre .title,
 pre .constant,
 pre .parent,
-pre .tag .value,
-pre .rules .value,
-pre .rules .value .number,
 pre .preprocessor,
 pre .ruby .symbol,
 pre .ruby .symbol .string,
@@ -47,12 +44,15 @@ pre .regexp,
 pre .literal,
 pre .smalltalk .symbol,
 pre .smalltalk .char,
+pre .tag .value,
 pre .change {
-  color: #c22;
+  color: #800;
 }
 
 pre .label,
 pre .javadoc,
+pre .tag .attribute,
+pre .rules .keyword,
 pre .ruby .string,
 pre .decorator,
 pre .filter .argument,
@@ -68,7 +68,7 @@ pre .envvar,
 pre .apache .sqbracket,
 pre .nginx .built_in,
 pre .tex .formula {
-  color: #a0a;
+  color: #808;
   font-weight: bold;
 }
 

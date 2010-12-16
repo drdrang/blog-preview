@@ -20,23 +20,19 @@ function addLineNumbers(lineArray, start) {
 }
 
 function styleCode() {
-  // IE wouldn't work with arly versions of this function, so I stopped trying
+  // IE wouldn't work with early versions of this function, so I stopped trying
   // to get it to work. Now that the function's been rewritten, I may need to
   // revisit this decision.
   var isIE = navigator.appName.indexOf('Microsoft') != -1;
   if (isIE) return;
   
-  //Initialize the highlighting code.
-  hljs.initialize();
-  
-  
   // Go through each of the <pre><code> blocks.
-  $('pre code').each( function(i, v) {
-    var oldContent = v.innerHTML;
+  $('pre code').each( function(i, elem) {
+    var oldContent = elem.innerHTML;
     var newContent = [];
     
     // Get the language, if it's given.
-    var lang = oldContent.match(/^(bash|cmake|cpp|css|diff|xml|html|ini|java |javascript|lisp|lua|perl|php|python|ruby|scala |sql|tex):\n/);
+    var lang = oldContent.match(/^(bash|cmake|cpp|css|diff|xml|html|ini|java |javascript|lisp|lua|perl|php|python|ruby|scala|sql|tex):\n/);
     if (lang) {
       lang = lang[1];
       oldContent = oldContent.split("\n").slice(1).join("\n");
@@ -49,34 +45,25 @@ function styleCode() {
       oldContent = oldContent.replace(/^( *)(\d+):(  )/mg, "");
     }
     
-    // Turn the content into an array of lines.
-    newContent = oldContent.split("\n");
-    if (newContent[newContent.length - 1] == "") {
-      newContent.pop();
-    }
+    // Put the unnumbered code back into the element.
+    elem.innerHTML = oldContent;
     
+    // Highlight the code if the language is given.
     if (lang) {
-      var code = newContent.join("\n");
-      code = hljs.highlight(lang, code).value;
-      newContent = code.split("\n");
-      if (line) {
-        newContent = addLineNumbers(newContent, line);
-        newContent.push("");
-        newContent.push('<button onclick="showPlain(this.parentNode)">Without line numbers</button>');
-      }
-    }
-    else {
-      if (line) {
-        newContent = addLineNumbers(newContent, line);
-        newContent.push("");
-        newContent.push('<button onclick="showPlain(this.parentNode)">Without line numbers</button>');
-      }
+      $(this).addClass("language-" + lang);
+      hljs.highlightBlock(elem);
     }
     
+    // Put the line numbers back in if they were removed.
+    if (line) {
+      var newContent = elem.innerHTML.split("\n");
+      newContent = addLineNumbers(newContent, line);
+      newContent.push("");
+      newContent.push('<button onclick="showPlain(this.parentNode)">Without line numbers</button>');
+      elem.innerHTML = newContent.join("\n");
+    }
     
-    newContent = newContent.join("\n");
-    v.innerHTML = newContent;
-   })
+  })
 }
 
 function showPlain(code) {
