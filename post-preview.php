@@ -19,11 +19,16 @@ $title_parts = preg_split("/: /", $title_lines[0]);
   <link rel="stylesheet" type="text/css" media="all" href="syntax-default.css" />
   <script type="text/javascript" src="<?php echo "$home/Library/JavaScript/MathJax/MathJax.js" ?>"></script>
   <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-  <script type="text/javascript" src="highlight.min.js"></script>
+  <script type="text/javascript" src="big.highlight.js"></script>
   <script type="text/javascript" src="styleLineNumbers.js"></script>
   <script type="text/javascript" src="footnote-popup.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      styleCode();
+    });
+  </script>
 </head>
-<body onload="styleCode()">
+<body>
    <div id="container">
       <div id="header">
          <h1>And now it's all this</h1>
