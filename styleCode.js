@@ -31,19 +31,22 @@ function styleCode() {
     var oldContent = elem.innerHTML;
     var newContent = [];
     
-    // Get the language, if it's given.
+    // Get the language, if it's given, and remove it.
     var lang = oldContent.match(/^(bash|cmake|cpp|css|diff|xml|html|ini|java |javascript|lisp|lua|perl|php|python|ruby|scala|sql|tex):\n/);
     if (lang) {
       lang = lang[1];
       oldContent = oldContent.split("\n").slice(1).join("\n");
     }
     
-    // Get the starting line number, if it's given.
+    // Get the starting line number, if it's given, and remove the line numbers.
     var line = oldContent.match(/^( *)(\d+):(  )/);
     if (line) {
       line = parseInt(line[2]);
       oldContent = oldContent.replace(/^( *)(\d+):(  )/mg, "");
     }
+    
+    // Remove trailing empty lines, if any.
+    oldContent = oldContent.replace(/\n+$/, "");
     
     // Put the unnumbered code back into the element.
     elem.innerHTML = oldContent;
