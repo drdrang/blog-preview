@@ -70,13 +70,12 @@ function styleCode() {
 }
 
 function showPlain(code) {
+  // Make a copy and remove the button and line numbers.
   var oldCode = code.cloneNode(true);
-  for (var i=0; i<oldCode.childNodes.length; i++){
-    node = oldCode.childNodes[i];
-    if (node.nodeName == 'SPAN' || node.nodeName == 'BUTTON'){
-      oldCode.removeChild(node);
-    }
-  }
+  $(':button', oldCode).remove();
+  $(oldCode).find('span.ln').remove();
+  
+  // Show the remainder in a new window.
   var w = window.open("", "", "width=800,height=500,resizable=yes,scrollbars=yes");
   var d = w.document;
   d.open();
