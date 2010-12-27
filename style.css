@@ -98,14 +98,18 @@ a:hover {
   text-decoration: underline;
 }*/
 
-#content pre, blockquote {
-/*  font-size: 90%;*/
+#content blockquote {
+  font-size: 90%;
   padding-left: 1em;
   padding-right: 1em;
   background-color: #F3FEF3;
 }
 
-#content pre {
+#content pre, blockquote {
+/*  font-size: 90%;*/
+  padding-left: 1em;
+  padding-right: 1em;
+  background-color: #F3FEF3;
   overflow: auto;
   line-height: 1.25;
 }
