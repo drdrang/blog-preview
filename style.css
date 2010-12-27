@@ -254,6 +254,10 @@ a:hover {
   margin-bottom: .5em;
 }
 
+#content div.update  blockquote {
+  background-color: inherit;
+}
+
 #content div.sidebar {
   padding-left: 1em;
   padding-right: 1em;
