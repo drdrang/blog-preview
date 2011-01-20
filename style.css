@@ -105,6 +105,10 @@ a:hover {
   background-color: #F3FEF3;
 }
 
+#content blockquote.bbpTweet {
+  background-color: white;
+}
+
 #content pre {
   overflow: auto;
   line-height: 1.25;
