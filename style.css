@@ -75,7 +75,7 @@ a:hover {
 }
 
 #content h2 {
-  font-size: 110%;
+  font-size: 120%;
   font-style: italic;
   font-weight: bold;
   margin-bottom: -.5em;
@@ -83,7 +83,7 @@ a:hover {
 
 #content h3, h4, h5, h6 {
   font-size: 100%;
-  font-style: italic;
+  font-style: normal;
   font-weight: bold;
   margin-bottom: -.5em;
 }
