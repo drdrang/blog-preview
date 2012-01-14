@@ -7,7 +7,7 @@ function styleTweets() {
   $(".bbpBox").each( function(i) {
     var divID = $(this).attr("id");
     var tweetID = divID.slice(1);
-    var tweetURL = 'http://api.twitter.com/1/statuses/show/' + tweetID + '.json';
+    var tweetURL = 'http://api.twitter.com/1/statuses/show/' + tweetID + '.json?callback=?';
     $.getJSON(tweetURL, function(data){
       var twDate = new Date(data.created_at);
       var shortdate = twDate.toDateString();
