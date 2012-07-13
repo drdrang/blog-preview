@@ -10,7 +10,7 @@ function styleTweets() {
     var timeStamp = $(this).find('span.twTimeStamp').text();
     var userRealName = $(this).find('span.twRealName').text();
     var userScreenName = $(this).find('span.twScreenName').text().slice(1);
-    var userURL = 'http://api.twitter.com/1/users/show.json?screen_name=' + userScreenName + '&include_entities=true';
+    var userURL = 'http://api.twitter.com/1/users/show.json?callback=?&screen_name=' + userScreenName + '&include_entities=true';
     $.getJSON(userURL, function(data){
       // Remove plain attribution.
       $("#" + divID + " .twMeta").css('display', 'none');
