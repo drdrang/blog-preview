@@ -2,7 +2,7 @@
 $home = getenv("HOME");
 require_once("$home/git/php-markdown-extra-math/markdown.php");
 require_once("$home/git/php-smartypants/smartypants.php");
-$full = stream_get_contents(STDIN);
+$full = file_get_contents("$home/git/blog-preview/post.md");
 $parts = preg_split("/\n\n/", $full, 2);
 $header_lines = preg_split("/\n/", $parts[0]);
 $title_lines = array_values(preg_grep("/^Title/", $header_lines));
