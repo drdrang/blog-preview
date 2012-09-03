@@ -32,7 +32,7 @@ function styleCode() {
     var newContent = [];
     
     // Get the language, if it's given, and remove it.
-    var lang = oldContent.match(/^(bash|cmake|cpp|css|diff|xml|html|ini|java |javascript|lisp|lua|perl|php|python|ruby|scala|sql|tex):\n/);
+    var lang = oldContent.match(/^(applescript|bash|cpp|cs|css|diff|http|ini|java|javascript|json|lisp|xml|markdown|matlab|objectivec|perl|php|python|r|ruby|sql|tex):\n/);
     if (lang) {
       lang = lang[1];
       oldContent = oldContent.split("\n").slice(1).join("\n");
