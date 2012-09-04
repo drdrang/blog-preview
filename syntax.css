@@ -89,10 +89,15 @@ pre .winutils,
 pre .bash .variable,
 pre .apache .tag,
 pre .tex .command {
-  color: #22c;
+  color: #008;
   font-weight: bold;
 }
 
+pre .unix,
+pre .ui {
+  color: #806;
+  font-weight: bold;
+}
 
 pre .html .css,
 pre .html .javascript,
