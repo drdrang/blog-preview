@@ -80,6 +80,7 @@ pre .yardoctag {
 }
 
 pre .keyword,
+pre .command,
 pre .id,
 pre .phpdoc,
 pre .built_in,
@@ -93,10 +94,10 @@ pre .tex .command {
   font-weight: bold;
 }
 
-pre .unix,
-pre .ui {
+pre .type,
+pre .property {
   color: #806;
-  font-weight: bold;
+  font-style: italic;
 }
 
 pre .html .css,
