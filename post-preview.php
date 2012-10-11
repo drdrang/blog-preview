@@ -18,10 +18,10 @@ $title_parts = preg_split("/: /", $title_lines[0]);
   <link rel="stylesheet" type="text/css" media="all" href="syntax.css" />
   <script type="text/javascript" src="<?php echo "$home/Library/JavaScript/MathJax/MathJax.js" ?>"></script>
   <script type="text/javascript" src="jquery-1.4.2.min.js"></script>
-  <script type="text/javascript" src="highlight.pack.js"></script>
+  <script type="text/javascript" src="../highlight.js/build/highlight.pack.js"></script>
   <script type="text/javascript" src="styleCode.js"></script>
   <script type="text/javascript" src="footnote-popup.js"></script>
-  <script type="text/javascript" src="styleTweets.js"></script>
+  <!-- <script type="text/javascript" src="styleTweets.js"></script> -->
 </head>
 <body onLoad="styleCode()">
    <div id="container">
