@@ -330,6 +330,11 @@ a:hover {
   font-size: 75%;
 }
 
+#content .tags, .source, .caption {
+  font-size: 75%;
+  text-align: right;
+}
+
 #content p.social {
   text-align: right;
   margin-top: 0;
@@ -341,8 +346,8 @@ a:hover {
 }
 
 #content .bbpBox {
-  width: 75%;
-  background: #666;
+  width: 80%;
+  background: #8EC2DA;
   margin-left: auto;
   margin-right: auto;
   padding: 1em;
@@ -358,7 +363,7 @@ a:hover {
 }
 
 #content .bbpBox blockquote a {
-  color: blue;
+  color: #0000E6;
   text-decoration: none;
 }
 
@@ -367,7 +372,7 @@ a:hover {
 }
 
 #content .bbpBox blockquote .twMeta {
-  font-size: 80%;
+  font-size: 75%;
 }
 
 #content .bbpBox blockquote .twAuthor {
