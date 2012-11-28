@@ -355,7 +355,7 @@ a:hover {
 
 #content .bbpBox blockquote {
   font-size: 110%;
-  background-color: white;
+  background-color: white !important;
   margin: 0em !important;
   padding: .5em 1em .5em 1em;
   -moz-border-radius: 5px;
@@ -373,6 +373,7 @@ a:hover {
 
 #content .bbpBox blockquote .twMeta {
   font-size: 75%;
+  margin-left: 5em;
 }
 
 #content .bbpBox blockquote .twAuthor {
